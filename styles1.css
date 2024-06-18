@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden; 
 }
 * {
     margin: 0;
@@ -45,20 +45,19 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1vh; 
+    gap: 10px; 
     text-align: center;
     position: relative;
 }
 
 #Textmain2 {
     font-family: "Roboto flex", sans-serif;
-    font-size: 8vw;
-    position: relative;
+    font-size: 7vw;
     font-weight: 700;
 }
 
 #textmain1 {
-     font-family: "Righteous", sans-serif;
+    font-family: "Righteous", sans-serif;
     font-size: 2.5vw; 
     position: absolute;
     top: -2vw; 
@@ -211,7 +210,7 @@ html, body {
   background-position: center;
   width: 100%;
   background-size: cover; 
-  min-height: 100vh; /* Ensure it expands to fit the content */
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,7 +238,7 @@ html, body {
 
 .row {
   display: flex; 
-  gap: 0.5vw; 
+  gap: 0.5px; 
 }
 /* for future
 .square {
@@ -260,7 +259,9 @@ html, body {
   height: 340px;
   transition: all 0.3s ease;
   overflow: hidden; 
-  max-width: 100%; /* Prevents boxes from expanding beyond their container */
+  max-width: 100%;
+  border-style: solid;
+  
 }
 
 .sq1 {
@@ -524,10 +525,165 @@ html, body {
   text-decoration: none;
   color: #ffffff;
 }
-/* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 640px) {
- 
+@media only screen and (max-width: 370px) {
+  .code-tag, .code-tag1{
+   font-size: 12px !important ;
+  }
+.code-tag1::before {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "<h3>";
+  position: absolute;
+  top: -5px;
+  left: 9px;
+  font-size: 15px;
+  color: grey;
+}
+.htmllogo img{
+  width: 40px;
+  height: 45px;
+}
+.csslogo img{
+  width: 55px;
+  height: 55px;
+}
+.kotlinlogo img{
+  width: 40px;
+  height: 42px;
+}
+.code-tag1::after {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "</h3>";
+  position: absolute;
+  bottom: -25px;
+  left: -0px;
+  font-size: 15px;
+  color: grey;
+}
+.code-tag::before {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "<h3>";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  font-size: 15px;
+  color: grey;
+}
 
+.code-tag::after {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "</h3>";
+  position: absolute;
+  bottom: -45px;
+  left: -0px;
+  font-size: 15px;
+  color: grey;
+}
+
+.h3-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  bottom: -15px;
+  width: 2px;
+  background: grey;
+}
+.top-section,.top-section-2 {
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+ }
+ @media only screen and (min-width: 371px) and (max-width: 520px) {
+ .code-tag, .code-tag1{
+  font-size: 14px !important;}
+  
+.h3-wrapper1::before {
+  bottom: 9px;
+}
+
+.code-tag1::before {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "<h3>";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  font-size: 12px !important;
+  color: grey;
+}
+
+.code-tag1::after {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "</h3>";
+  position: absolute;
+  bottom: -25px;
+  left: -2px;
+  font-size: 17px;
+  color: grey;
+}
+.code-tag::before {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "<h3>";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  font-size: 17px;
+  color: grey;
+}
+
+.code-tag::after {
+  font-weight: 400;
+  font-family: "Roboto Mono", sans-serif;
+  content: "</h3>";
+  position: absolute;
+  bottom: -55px;
+  left: -2px;
+  font-size: 17px;
+  color: grey;
+}
+
+.h3-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  bottom: -25px;
+  width: 2px;
+  background: grey;
+}
+ }
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (max-width: 640px) {
+ #Textmain2{
+  font-size: 50px !important;
+ }
+ #Textmain4{
+  font-size: 55px !important;
+ }
+
+ .code-tag{
+  font-size: 18px
+ }
+ .square{
+  height: 320px !important;
+ }
 
 }
 
@@ -545,9 +701,10 @@ html, body {
 }
 .square {
     width: 80%;
-    height: auto;
+    height: 280px !important;
 }
   .hamburger {
+    position: absolute;
     display: block;
     color: white;
 }
