@@ -448,84 +448,81 @@ html, body {
   width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex;
+  justify-content: center;
   margin: 20px;
   gap: 20px;
+  width: 1250px;
 }
 .containerS3 .card{
   position: relative;
   height: 250px;
   background: #fff;
   display: flex;
-  width: 45%;
+ 
   margin: 30px 0;
 }
-.imgbg h3{
-  color: white;
-  font-family: "Roboto Mono", sans-serif;
-}
-.imgbg{
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.overlay {
   width: 100%;
-  height: 100%;
-  background: url(Images/Project4-background.PNG);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.3s ease-in-out;
-}
-.pythonlogo img{
-  width: 50px;
-  height: 50px;
-}
-.containerS3 .card:hover .imgbg{
-  width: 150px;
-  height: 150px;
-  left: -75px;
-  top: calc(50% - 75px);
-  transition: 0.5 ease-in-out;
-  background: #ff0057;
-}
-
-.containerS3 .card .imgbg img{
-  max-width: 100px;
-  transition: 0.5s ease-in-out;
-}
-
-.containerS3 .card:hover .imgbg img{
-  max-width: 100px;
-  transition: 0.5s ease-in-out;
-}
-.content{
+  height: 0px;
+  background: linear-gradient(transparent, #ffffff 78%);
+  font-family: "Roboto flex", sans-serif;
   position: absolute;
-  right: 0;
-  width: calc(100% - 75px);
-  height: 100%;
-  padding: 20px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 120px; /* Adjust padding to fit the larger card size */
+  text-align: center;
+  font-size: 20px;
+  transition: height 0.5s;
 }
 
-.content h3
-{
+.overlay h3 {
+  font-weight: 700;
   margin-bottom: 5px;
-  font-size: 24px;
+  margin-top: 30%; /* Adjust to fit within the larger card */
+  font-family: "Roboto flex", sans-serif;
+  font-size: 24px; /* Adjust font size to fit the larger card */
+  letter-spacing: 2px;
 }
 
-.content a{
-  display: inline-block;
+.overlay p {
+  margin-top: 5px;
+}
+
+.overlay a {
   margin-top: 10px;
-  padding: 5px 10px;
-  background: #333;
+  color: #f5f5f5;
   text-decoration: none;
-  color: #ffffff;
+  font-size: 19px; /* Adjust font size to fit the larger card */
+  background: #000000;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px 10px; /* Adjust padding to fit the larger card */
 }
 
+
+.box:hover .overlay {
+  height: 100%;
+}.box {
+  height: 300px; /* Maintain height to keep cards rectangular */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.box img {
+  width: 100%;
+  height: 100%; /* Ensure image covers the whole card */
+  object-fit: cover; /* Fit the image within the card without zooming */
+  
+  display: block;
+  transition: none; /* Remove the zoom effect */
+}
 
 
 @media only screen and (max-width: 370px) {
