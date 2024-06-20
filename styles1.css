@@ -18,7 +18,7 @@ html, body {
 
 
 #first-section {
-    background-image: url(Images/cubicbg12.png);
+    background-image: url("Images/cubicbg12.png");
     background-position: center;
     background-size: cover; 
     width: 100%;
@@ -211,7 +211,7 @@ html, body {
 
 
 #second-section{
-  background-image: url(Images/cubicbg2.png);
+  background-image: url("Images/cubicbg2.png");
   background-position: center;
   width: 100%;
   background-size: cover; 
@@ -426,7 +426,7 @@ html, body {
 }
 
 #third-section{
-  background-image: url(Images/cubicbg3.png);
+  background-image: url("Images/cubicbg3.png");
   background-position: center;
   width: 100%;
   background-size: cover; 
